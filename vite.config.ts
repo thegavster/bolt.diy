@@ -137,7 +137,7 @@ export default defineConfig((config) => {
         // Allow the automatically generated Railway URL
         process.env.RAILWAY_STATIC_URL
       ]
-    }
+    },
     envPrefix: [
       'VITE_',
       'OPENAI_LIKE_API_BASE_URL',
