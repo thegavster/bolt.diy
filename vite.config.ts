@@ -132,6 +132,12 @@ export default defineConfig((config) => {
       chrome129IssuePlugin(),
       config.mode === 'production' && optimizeCssModules({ apply: 'build' }),
     ],
+    server: {
+      allowedHosts: [
+        // Allow the automatically generated Railway URL
+        process.env.RAILWAY_STATIC_URL
+      ]
+    }
     envPrefix: [
       'VITE_',
       'OPENAI_LIKE_API_BASE_URL',
